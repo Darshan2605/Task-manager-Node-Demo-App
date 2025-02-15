@@ -1,8 +1,9 @@
 # Use Node.js LTS (Long Term Support) version
-FROM node:18-alpine
+FROM public.ecr.aws/docker/library/node:18-alpine
+
 
 # Create app directory in container
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
